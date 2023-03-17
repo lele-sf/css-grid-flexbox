@@ -1,0 +1,444 @@
+/* colors - see style guide for docs. 
+Clearly there is more you could place in variables, up to you if you want to use them. My answer does not go beyond colors to keep the code easier to read. */
+
+:root {
+    --color1: #001219;
+    --color2: #005f73;
+    --color3: #3d9397;
+    --color4: #94d28d;
+    --color5: #e9d8a6;
+    --color6: #ee9800;
+    --color7: #ca6702;
+    --color8: #bb3e03;
+    --color9: #ae2012;
+    --color10: #9b2226;
+}
+
+
+/* generic site styles */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #DBE5DE;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+section h2 {
+    font-size: 2.5rem;
+}
+
+section ul, footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*  header & nav styles  */
+
+.header {
+    background-color: var(--color5);
+}
+header {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: space-between;
+}
+
+nav li {
+    flex-basis: 48%;
+    margin-bottom: 0.5rem;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    background-color: var(--color10);
+    display: block;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+nav li:first-child a {
+    background-color: transparent;
+}
+
+nav a:hover {
+    background-color: var(--color1);
+    color: var(--color5);
+}
+
+/*  popular print   */
+#popular {
+    display: block;
+    background-color: var(--color2);
+    color: white;
+    padding: 1rem;
+    max-width: 100%;
+}
+
+/*  hero image  */
+
+#hero {
+    background-color: var(--color7);
+    text-align: center;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#hero img {
+    max-width: 100%;
+    max-height: 454px;
+}
+
+/* Initial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
+
+.container {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.item {    
+    padding: 0;
+    margin-bottom: 0.5rem;
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    border-width: 10px;
+    border-style: solid;
+}
+
+.item img {
+    width: 100%;
+}
+
+.item figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.733);
+    padding: 0;
+    margin: 0;
+}
+
+.item figcaption a {
+    display: block;
+    padding: 1rem;
+    color: var(--color1);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.color2,
+.color2 a:hover {
+    border-color: var(--color2);
+    color: var(--color2);
+}
+
+.color3,
+.color3 a:hover {
+    border-color: var(--color3);
+    color: var(--color3);
+}
+
+.color4,
+.color4 a:hover {
+    border-color: var(--color4);
+    color: var(--color4);
+}
+
+.color6,
+.color6 a:hover {
+    border-color: var(--color6);
+    color: var(--color6);
+}
+
+.color7,
+.color7 a:hover {
+    border-color: var(--color7);
+    color: var(--color7);
+}
+
+.color9,
+.color9 a:hover {
+    border-color: var(--color9);
+    color: var(--color9);
+}
+
+/*  mission code  */
+
+.missiontext {
+    display: flex;
+    flex-direction: column-reverse;
+    line-height: 1.7;
+}
+
+.missionimg {
+    padding-top: 10px;
+    max-width: 100%;
+    width: fit-content;
+    height: auto;
+    object-fit: contain;
+}
+
+/*  footer  */
+footer {
+    background-color: var(--color5);
+    display: flex;
+    flex-flow: column wrap;
+    padding: 3rem;
+
+}
+.social ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+address {
+    padding: 0;
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* figure and figure caption styling */
+
+#popart {
+    padding-bottom: 3rem;
+}
+
+#popart figure {
+    padding: 0;
+    margin: 0;
+    border: 5px solid var(--color8);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+}
+
+#popart img {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    width: 100%;
+}
+
+#popart figcaption {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.875rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#popart figcaption a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--color1);
+}
+
+#popart figcaption a:hover {
+    color: var(--color8);
+}
+
+#donut ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+.d3 {
+    grid-row: 1/2;
+}
+#donut img {
+    width: 100%;
+}
+
+
+@media (min-width: 550px) {
+    #popart ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .span2 {
+        grid-column: span 2;
+    }
+    .rowspan2 {
+        grid-row: span 2;
+    }
+    .span3 {
+        grid-column: span 3;
+    }
+    #donut ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        gap: 10px;
+    }
+    .d1 {
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+    .d2 {
+        grid-column: 1/2;
+        grid-row: 4/6;
+    }
+    .d3 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .d4 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .d5 {
+        grid-column: 2/3;
+        grid-row: 3/6;
+    }
+    .d3 img,
+    .author {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .d3 img {
+        opacity: 0.2;
+    }
+    .author {
+        padding: 1rem;
+        z-index: 1000;
+    }
+}
+
+
+/* At this breakpoint, transition to 2 figures per line */
+
+@media (min-width: 550px) {
+    .container ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .container li {
+        flex-basis: 49.5%;
+    }
+    .missiontext {
+        flex-direction: row;
+    }
+    .missionimg {
+        padding-right: 20px;
+    }
+    footer {
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .social ul {
+        flex-basis: 32.5%;
+    }
+    address {
+        flex-basis: 65.5%;
+    }
+    nav ul {
+        justify-content: center;
+        gap: 1.2em;
+    }
+    nav li {
+        flex-basis: auto;
+        margin-bottom: 0;
+    }
+    nav a {
+        color: var(--color1);
+        background-color: transparent;
+        padding: 0;
+    }
+    nav a:hover {
+        color: var(--color2);
+        background-color: transparent;
+    }
+    #popular {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: stretch;
+        margin: 0;
+        padding: 0;
+    
+    }
+    #popular li:last-child {
+        flex-basis: 100%;
+    
+    }
+    #popular li:last-child img {
+        object-position: 0 -350px;
+    }
+      
+}
+
+/* At this breakpoint, transition to 3 figures per line */
+
+@media (min-width: 800px) {
+    .container li, #popular li:last-child {
+        flex-basis: 32.5%;
+    }
+    #popular li:last-child img {
+        object-position: 0;
+    }
+    nav ul {
+        justify-content: flex-end;
+    }
+    nav li:first-child {
+        flex-basis: auto;
+        margin: 0 auto;
+        order: 2;
+    }
+    nav li:nth-child(2), nav li:nth-child(3) {
+        order: 1;
+    }
+    nav li:nth-child(4), nav li:nth-child(5) {
+        order: 3;
+    }
+}
